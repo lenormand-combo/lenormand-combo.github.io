@@ -64,6 +64,13 @@ test("使わない語が、手書きにも自動合成にも入っていない",
   }
 });
 
-test("段階1の手書きの組は約35組", () => {
-  assert.ok(Object.keys(LN.pairs).length >= 30);
+test("手書きの組は約170組で、人物カードの組はすべてそろっている", () => {
+  assert.ok(Object.keys(LN.pairs).length >= 170);
+  for (const p of [28, 29]) {
+    for (let i = 1; i <= 36; i++) {
+      if (i === p) continue;
+      const key = `${Math.min(i, p)}-${Math.max(i, p)}`;
+      assert.ok(LN.pairs[key], `人物の組 ${key}`);
+    }
+  }
 });
