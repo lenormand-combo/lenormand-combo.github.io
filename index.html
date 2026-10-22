@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>ルノルマン・コンビ検索</title>
+  <meta name="description" content="ルノルマンカード36枚の2枚組の意味を、すぐに引ける検索アプリ">
+  <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15121c" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ルノルマン">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="logic.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <button type="button" id="back" class="back" hidden>← 戻る</button>
+    <h1 id="title">ルノルマン・コンビ検索</h1>
+  </header>
+  <main id="view" tabindex="-1">
+    <noscript><p class="note">このアプリを使うには JavaScript を有効にしてください。</p></noscript>
+  </main>
+  <p class="disclaimer">娯楽と自己内省のための参考情報です。医療・法律・金融の助言ではありません。</p>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <nav class="tabs" aria-label="画面の切り替え">
+    <a href="#draw" data-tab="draw"><span aria-hidden="true">🔍</span>引く</a>
+    <a href="#fav" data-tab="fav"><span aria-hidden="true">★</span>お気に入り</a>
+    <a href="#settings" data-tab="settings"><span aria-hidden="true">⚙</span>設定</a>
+  </nav>
+</body>
+</html>
